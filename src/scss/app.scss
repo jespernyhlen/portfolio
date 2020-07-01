@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
 @import 'navbar';
+@import 'header';
 
 /* Box sizing rules */
 *,
@@ -8,8 +11,8 @@
 }
 
 /* Remove default padding */
-ul[class],
-ol[class] {
+ul,
+ol {
     padding: 0;
 }
 
@@ -19,9 +22,10 @@ h1,
 h2,
 h3,
 h4,
+h5,
 p,
-ul[class],
-ol[class],
+ul,
+ol,
 li,
 figure,
 figcaption,
@@ -31,12 +35,35 @@ dd {
     margin: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 70px;
+}
+
+h5 {
+    font-size: 16px;
+    letter-spacing: 5px;
+}
+
 /* Set core body defaults */
 body {
     min-height: 100vh;
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
+    // font-family: 'Roboto', sans-serif;
+    font-family: 'Questrial', sans-serif;
 }
 
 /* Remove list styles on ul, ol elements */

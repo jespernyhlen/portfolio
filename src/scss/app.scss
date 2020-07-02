@@ -7,6 +7,7 @@ $lightThemeColor: lighten($themeColor, 28%);
 @import 'header';
 @import 'about';
 @import 'info';
+@import 'footer';
 
 /* Box sizing rules */
 *,
@@ -158,4 +159,40 @@ h2 + p {
 
 p + p {
     margin-top: 22px;
+}
+
+.text__darkgrey {
+    color: #444 !important;
+}
+
+.text__lightgrey {
+    color: #ddd !important;
+}
+
+.text__white {
+    color: #fff !important;
+}
+
+.center__margin {
+    margin: 0 auto;
+}
+
+.center__text {
+    text-align: center !important;
+}
+
+.no__border {
+    border: 0 !important;
+}
+
+.hide__element {
+    border: 0;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
 }

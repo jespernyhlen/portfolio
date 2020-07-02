@@ -1,5 +1,5 @@
 const headerInfo = {
-    title: 'Jesper Nyhlén',
+    title: '<span class="text__darkgrey">Jesper</span> Nyhlén',
     subTitle: 'Webbutvecklare',
 };
 

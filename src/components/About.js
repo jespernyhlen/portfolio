@@ -5,7 +5,7 @@ const sectionInfo = {
     title:
         'Intresse av<br><span class="text__highlight">moderna lösningar</span><br>för webbsidor<br> och applikationer.',
     contentText:
-        'Med stor målmedvetenhet och engagemang för problemlösning är mitt stora mål att utvecklas som både person och webbutvecklare. Mitt fokus ligger på frontend såväl som backend-utveckling, vilket resulterar i att jag ser mig som väldigt flexibel utvecklare med en vilja att ständigt söka ny information och utöka min kunskap inom yrket.',
+        'Med stor målmedvetenhet och engagemang för problemlösning är mitt stora mål att ständigt utvecklas personligt och givetvis som utvecklare. Mitt fokus ligger på frontend såväl som backend-utveckling vilket resulterar i att jag ser mig själv som en väldigt flexibel utvecklare med en vilja att ständigt söka ny information och utöka min kunskap inom yrket.',
 };
 
 const About = () => {

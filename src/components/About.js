@@ -1,11 +1,11 @@
 import profileImage from '../images/profileimage.png';
 
 const sectionInfo = {
-    subTitle: 'Selected Works',
+    subTitle: 'Om jesper Nyhlén',
     title:
-        '<span class="text__highlight">Check out</span> the<br>latest projects<br>we completed',
+        'Intresse av<br><span class="text__highlight">moderna lösningar</span><br>för webbsidor<br> och applikationer.',
     contentText:
-        'Our team works on a wide variety of web design & development projects every day. We deliver quality solutions for your websites that are based on our boundless creativity and your needs.',
+        'Med stor målmedvetenhet och engagemang för problemlösning är mitt stora mål att utvecklas som både person och webbutvecklare. Mitt fokus ligger på frontend såväl som backend-utveckling, vilket resulterar i att jag ser mig som väldigt flexibel utvecklare med en vilja att ständigt söka ny information och utöka min kunskap inom yrket.',
 };
 
 const About = () => {

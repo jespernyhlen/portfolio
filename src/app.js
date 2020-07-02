@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar';
 import Header from './components/Header';
 import About from './components/About';
+import Info from './components/Info';
 
 async function App() {
     const template = document.createElement('template');
@@ -10,6 +11,7 @@ async function App() {
       ${Navbar()}
       ${Header()}
       ${About()}
+      ${Info()}
     </>
   `;
     // Return a new node from template

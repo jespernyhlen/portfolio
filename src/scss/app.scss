@@ -3,6 +3,7 @@
 @import 'navbar';
 @import 'header';
 @import 'about';
+@import 'info';
 
 /* Box sizing rules */
 *,
@@ -51,7 +52,8 @@ a {
 p {
     font-size: 13px;
     line-height: 26px;
-    color: #666;
+    color: #777;
+    letter-spacing: 1px;
 }
 
 h1 {
@@ -61,6 +63,8 @@ h1 {
 h2 {
     font-size: 40px;
     line-height: 52px;
+    border-left: 1px solid #da933e;
+    padding-left: 20px;
 }
 
 h5 {
@@ -147,4 +151,8 @@ h2 + p {
 
 .text__highlight {
     color: #da933f;
+}
+
+p + p {
+    margin-top: 22px;
 }

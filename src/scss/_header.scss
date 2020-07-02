@@ -48,8 +48,9 @@ $maxWidth: 1170px;
             }
 
             .header__title {
-                border-left: 5px solid #f5e0c6;
-                background: #f5e0c6;
+                // background: #f5e0c6;
+                background: $lightThemeColor;
+
                 width: 100%;
                 text-align: center;
                 margin-bottom: 5px;
@@ -57,7 +58,7 @@ $maxWidth: 1170px;
 
             .header__sub__title {
                 padding: 0 10px;
-                border-bottom: 2px solid #f5e0c6;
+                border-bottom: 1px solid $themeColor;
                 padding-bottom: 10px;
                 color: #555;
             }

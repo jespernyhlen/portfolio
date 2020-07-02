@@ -2,3 +2,4 @@ node_modules
 development
 .cache
 src/images/*
+src/.DS_Store

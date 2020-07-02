@@ -9,8 +9,8 @@ const Navbar = () => {
             </a>
             <div class="navbar__links">
                 <ul>
-                    <li><a class="active" href="#example">Nav1</a></li>
-                    <li><a href="#example2">Nav2</a></li>
+                    <li><a class="active" href="#example">Hem</a></li>
+                    <li><a href="#example2">Om mig</a></li>
                     <li><a href="#example3">Nav3</a></li>
                     <li><a href="#example4">Nav4</a></li>
                     <li><a href="#example5">Nav5</a></li>

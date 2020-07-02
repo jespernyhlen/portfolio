@@ -2,6 +2,7 @@
 
 @import 'navbar';
 @import 'header';
+@import 'about';
 
 /* Box sizing rules */
 *,
@@ -47,8 +48,19 @@ a {
     text-decoration: none;
 }
 
+p {
+    font-size: 13px;
+    line-height: 26px;
+    color: #666;
+}
+
 h1 {
     font-size: 70px;
+}
+
+h2 {
+    font-size: 40px;
+    line-height: 52px;
 }
 
 h5 {
@@ -104,4 +116,35 @@ select {
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
     }
+}
+
+.col__5 {
+    -ms-flex: 0 0 41.66667%;
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%;
+}
+
+.col__6 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+span.section__subtitle {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 9px;
+    color: #444;
+}
+
+span.section__subtitle + h2 {
+    margin-top: 15px;
+}
+
+h2 + p {
+    margin-top: 30px;
+}
+
+.text__highlight {
+    color: #da933f;
 }

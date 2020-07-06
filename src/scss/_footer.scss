@@ -1,7 +1,7 @@
 #footer {
     &.container__wrapper {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding: 50px 0;
+
         background: #f8f8f8;
         background: -webkit-linear-gradient(to right, #f8f8f8, #fbfbfb);
         background: linear-gradient(to right, #f8f8f8, #fbfbfb);
@@ -11,13 +11,13 @@
         min-height: 100vh;
         position: relative;
 
-        @media only screen and (min-width: 770px) {
-            padding: 150px 0;
-        }
         .container {
             max-width: 600px;
             display: flex;
             flex-direction: column;
+            @media only screen and (min-width: 500px) {
+                margin-top: 60px;
+            }
 
             .row {
                 flex: 1 0 auto;
@@ -48,6 +48,9 @@
 
         .form__group:last-of-type {
             margin-top: 50px;
+            @media only screen and (max-width: 500px) {
+                margin-bottom: 60px;
+            }
         }
 
         .form__input {
@@ -155,6 +158,10 @@
                 font-size: 16px;
                 color: #999;
                 margin-top: 1px;
+
+                @media only screen and (max-width: 500px) {
+                    display: none;
+                }
             }
             p {
                 color: #888;
@@ -167,6 +174,9 @@
                 &:hover {
                     color: #222;
                 }
+            }
+            @media only screen and (max-width: 500px) {
+                flex-direction: column;
             }
         }
     }

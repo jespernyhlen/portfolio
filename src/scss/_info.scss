@@ -2,9 +2,7 @@
     background: #fff;
 
     &.container__wrapper {
-        padding-left: 20px;
-        padding-right: 20px;
-
+        padding: 50px 0;
         display: flex;
         -ms-flex-align: center;
         align-items: center;
@@ -13,9 +11,6 @@
         min-height: 100vh;
         position: relative;
 
-        @media only screen and (min-width: 770px) {
-            padding: 150px 0;
-        }
         .container {
             max-width: 900px;
             margin: 0 auto;

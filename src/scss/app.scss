@@ -126,16 +126,41 @@ select {
     }
 }
 
-.col__5 {
-    -ms-flex: 0 0 41.66667%;
-    flex: 0 0 41.66667%;
-    max-width: 41.66667%;
+.col__1 {
+    width: 8.33%;
 }
-
+.col__2 {
+    width: 16.66%;
+}
+.col__3 {
+    width: 25%;
+}
+.col__4 {
+    width: 33.33%;
+}
+.col__5 {
+    width: 41.66%;
+}
 .col__6 {
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%;
-    max-width: 50%;
+    width: 50%;
+}
+.col__7 {
+    width: 58.33%;
+}
+.col__8 {
+    width: 66.66%;
+}
+.col__9 {
+    width: 75%;
+}
+.col__10 {
+    width: 83.33%;
+}
+.col__11 {
+    width: 91.66%;
+}
+.col__12 {
+    width: 100%;
 }
 
 span.section__subtitle {
@@ -149,8 +174,8 @@ span.section__subtitle + h2 {
     margin-top: 15px;
 }
 
-h2 + p {
-    margin-top: 30px;
+h2 {
+    margin-bottom: 30px;
 }
 
 .text__highlight {
@@ -195,4 +220,75 @@ p + p {
     padding: 0;
     position: absolute;
     width: 1px;
+}
+
+@media only screen and (max-width: 960px) {
+    h2 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .container__wrapper {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    body,
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        text-align: center !important;
+    }
+    h1 {
+        font-size: 46px;
+    }
+    h2 {
+        font-size: 26px;
+        line-height: 36px;
+        padding-left: 0;
+        border: 0 !important;
+    }
+
+    [class*='col__'] {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .text__content {
+        border: 0 !important;
+    }
+
+    .background__split {
+        display: none;
+    }
+    br {
+        display: none;
+    }
+
+    .content__col {
+        padding-right: 0 !important;
+    }
+
+    .image__col {
+        margin-top: 50px;
+        max-width: 400px;
+    }
+
+    #home.container__wrapper .container {
+        max-width: 500px;
+
+        .header__sub__title {
+            font-size: 14px;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    h1 {
+        font-size: 36px;
+    }
 }

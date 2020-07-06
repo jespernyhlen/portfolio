@@ -3,7 +3,7 @@ import profileImage from '../images/profileimage.png';
 const sectionInfo = {
     subTitle: 'Välkommen till sidan',
     title:
-        'Lorem ipsum<span class="text__highlight"><br>dolo sit ame</span> ornare<br>consecte adipiscing.',
+        'Lorem ipsum <span class="text__highlight"><br>dolo sit ame</span> ornare <br>consecte adipiscing.',
     textContent:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mollis, lectus ac sollicitudin bibendum non, massa sem volutpat ex, eget iaculis urna arcu sed odio. Donec porta aliquet est eget placerat. Morbi a tincidunt arcu. Pellentesque ut erat hendrerit leo blandit gravida. Phasellus ac augue nunc. Aenean nulla tortor, non condimentum nec.',
     textSubContent:
@@ -12,7 +12,7 @@ const sectionInfo = {
 
 const Info = () => {
     const template = `
-    <header id="info" class="container__wrapper">
+    <section id="info" class="container__wrapper">
         <div class="container">
             <div class="row">
                 <div class="content__col col__6">
@@ -27,7 +27,7 @@ const Info = () => {
             </image>
         </div>
         
-    </header>
+    </section>
   `;
 
     return template;

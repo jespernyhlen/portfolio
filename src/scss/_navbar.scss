@@ -18,11 +18,6 @@ $maxWidth: 1170px;
         justify-content: space-between;
         align-items: center;
 
-        @media only screen and (min-width: 770px) {
-            padding-left: 50px;
-            padding-right: 50px;
-        }
-
         .nav__logo__link {
             height: 120px;
             .navbar__logo {

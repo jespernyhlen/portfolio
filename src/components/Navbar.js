@@ -9,11 +9,11 @@ const Navbar = () => {
             </a>
             <div class="navbar__links">
                 <ul>
-                    <li><a class="active" href="#example">Hem</a></li>
-                    <li><a href="#example2">Om mig</a></li>
-                    <li><a href="#example3">Info</a></li>
-                    <li><a href="#example3">Portfolio</a></li>
-                    <li><a href="#example4">Kontakt</a></li>
+                    <li><a class="active" href="#home">Hem</a></li>
+                    <li><a href="#about">Om mig</a></li>
+                    <li><a href="#info">Info</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#footer">Kontakt</a></li>
                 </ul>
             </div>
         </div>

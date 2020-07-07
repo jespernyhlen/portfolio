@@ -2,6 +2,7 @@ import Navbar from './components/Navbar';
 import Header from './components/Header';
 import About from './components/About';
 import Info from './components/Info';
+import Portfolio from './components/Portfolio';
 import Footer from './components/Footer';
 
 async function App() {
@@ -13,6 +14,7 @@ async function App() {
       ${Header()}
       ${About()}
       ${Info()}
+      ${Portfolio()}
       ${Footer()}
     </>
   `;

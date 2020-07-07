@@ -1,7 +1,8 @@
-$maxWidth: 1170px;
+$maxWidth: 1260px;
 
 .navbar {
     height: 80px;
+    background: #fff;
     color: #5b5b5b;
     overflow: hidden;
     position: fixed;
@@ -38,6 +39,22 @@ $maxWidth: 1170px;
                 a {
                     padding: 15px 20px;
                     color: #555;
+                    display: block;
+                    transition: color 0.1s ease-in-out;
+                }
+
+                a::after {
+                    content: '';
+                    display: block;
+                    width: 0;
+                    height: 2px;
+                    background: #da933f;
+                    transition: width 0.3s;
+                }
+
+                a:hover::after {
+                    width: 100%;
+                    //transition: width .3s;
                 }
                 a.active {
                     color: $themeColor;

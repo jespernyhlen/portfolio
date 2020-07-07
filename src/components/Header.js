@@ -6,7 +6,7 @@ const headerInfo = {
 const Header = () => {
     const template = `
     <header id="home" class="container__wrapper bg__image">
-        <div class="container">
+        <div class="container fade-in-up">
           <div class="header__title__wrapper">
             <div class="header__title__container">
               <h1 class="header__title">

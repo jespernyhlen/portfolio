@@ -228,6 +228,57 @@ p + p {
     width: 1px;
 }
 
+// .fade-in-up {
+//     opacity: 0;
+//     transform: translateY(50%);
+//     transition: opacity 250ms ease-in, transform 400ms ease-in;
+// }
+
+// .fade-in-up.appear {
+//     transform: translateY(0);
+//     opacity: 1;
+// }
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(15%);
+    transition: opacity 350ms ease-in, transform 300ms ease-in;
+}
+
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(15%);
+    transition: opacity 350ms ease-in, transform 300ms ease-in;
+}
+
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-10%);
+    transition: opacity 350ms ease-in, transform 300ms ease-in;
+}
+
+.fade-in-right {
+    opacity: 0;
+    transform: translateX(10%);
+    transition: opacity 350ms ease-in, transform 300ms ease-in;
+}
+
+.fade-in.appear {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.fade-in-up.appear {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.fade-in-left.appear,
+.fade-in-right.appear {
+    transform: translateX(0);
+    opacity: 1;
+}
+
 @media only screen and (max-width: 960px) {
     h2 {
         font-size: 32px;

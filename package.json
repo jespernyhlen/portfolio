@@ -24,6 +24,7 @@
         "sass": "^1.26.3"
     },
     "dependencies": {
+        "emailjs-com": "^2.4.1",
         "smoothscroll-polyfill": "^0.4.4"
     },
     "bugs": {

@@ -16,13 +16,13 @@ const Info = () => {
         <div class="container">
             <div class="row">
                 <div class="content__col col__6">
-                    <span class="section__subtitle">${sectionInfo.subTitle}</span>
-                    <h2>${sectionInfo.title}</h2>
+                    <span class="section__subtitle fade-in-left">${sectionInfo.subTitle}</span>
+                    <h2 class="fade-in-left">${sectionInfo.title}</h2>
                     
                 </div>
-                <div class="text__content col__6">
-                <p>${sectionInfo.textContent}</p>
-                <p>${sectionInfo.textSubContent}</p>
+                <div class="text__content col__6 fade-in-right">
+                    <p>${sectionInfo.textContent}</p>
+                    <p>${sectionInfo.textSubContent}</p>
                 </div>
             </image>
         </div>

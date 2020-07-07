@@ -14,11 +14,11 @@ const About = () => {
         <div class="container">
             <div class="row">
                 <div class="content__col col__6">
-                    <span class="section__subtitle">${sectionInfo.subTitle}</span>
-                    <h2>${sectionInfo.title}</h2>
-                    <p>${sectionInfo.contentText}</p>
+                    <span class="section__subtitle fade-in-left">${sectionInfo.subTitle}</span>
+                    <h2 class="fade-in-left">${sectionInfo.title}</h2>
+                    <p class="fade-in-left">${sectionInfo.contentText}</p>
                 </div>
-                <div class="image__col col__6">
+                <div class="image__col col__6 fade-in-right">
                     <img class="profile__image" src="${profileImage}">
                 </div>
             </image>

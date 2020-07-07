@@ -41,9 +41,6 @@ const app = async () => {
     navlinks.forEach(function (link, index) {
         link.firstChild.addEventListener('click', function (e) {
             e.preventDefault();
-            // document
-            //     .getElementById(siteSections[index])
-            //     .scrollIntoView({ behavior: 'smooth', block: 'center' });
             // let headerHeight = 80; /* PUT HEADER HEIGHT HERE */
             // let buffer = 40; /* MAY NOT BE NEEDED */
 
@@ -59,6 +56,56 @@ const app = async () => {
                 buffer;
             window.scroll({ top: topOfElement, behavior: 'smooth' });
         });
+    });
+
+    let chain = Promise.resolve();
+    function show(e) {
+        return new Promise((res, rej) => {
+            setTimeout(() => {
+                e.classList.add('appear');
+                res();
+            }, 20);
+        });
+    }
+
+    const faders = document.querySelectorAll('.fade-in');
+    const fadersUp = document.querySelectorAll('.fade-in-up');
+    const fadersLeft = document.querySelectorAll('.fade-in-left');
+    const fadersRight = document.querySelectorAll('.fade-in-right');
+
+    const appearOptions = {
+        threshold: 0,
+        rootMargin: '0px 0px 0px 0px',
+    };
+    const appearOnScroll = new IntersectionObserver(function (
+        entries,
+        appearOnScroll
+    ) {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) {
+                return;
+            } else {
+                chain = chain.then(() => show(entry.target));
+                appearOnScroll.unobserve(entry.target);
+            }
+        });
+    },
+    appearOptions);
+
+    faders.forEach((fader) => {
+        appearOnScroll.observe(fader);
+    });
+
+    fadersUp.forEach((fader) => {
+        appearOnScroll.observe(fader);
+    });
+
+    fadersLeft.forEach((fader) => {
+        appearOnScroll.observe(fader);
+    });
+
+    fadersRight.forEach((fader) => {
+        appearOnScroll.observe(fader);
     });
 };
 // Load app

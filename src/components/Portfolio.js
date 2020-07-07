@@ -16,13 +16,13 @@ const Portfolio = () => {
     <section id="portfolio" class="container__wrapper">
         <div class="container">
             <div class="row center__text">
-                <div class="content__col center__margin">
+                <div class="content__col center__margin fade-in">
                     <span class="section__subtitle">${sectionInfo.subTitle}</span>
                     <h2 class="no__border">${sectionInfo.title}</h2>
                 </div>
             </div>
             <div class="row center__text">
-                <div class="portfolio__item col__4">
+                <div class="portfolio__item col__4 fade-in-up">
                     <img class="portfolio__image" src="${portfolioImg1}">
                     <div class="portfolio__content">
                         <span class="section__subtitle">${sectionInfo.subTitle}</span>
@@ -34,7 +34,7 @@ const Portfolio = () => {
                     </div>
                    
                 </div>
-                <div class="portfolio__item col__4">
+                <div class="portfolio__item col__4 fade-in">
                     <img class="portfolio__image" src="${portfolioImg2}">
                     <div class="portfolio__content">
                         <span class="section__subtitle">${sectionInfo.subTitle}</span>
@@ -45,7 +45,7 @@ const Portfolio = () => {
                         <p>Maecenas commodo posuere egestas. Maecenas placerat justo nunc, sit amet malesuada ex viverra quis. Duis pharetra dolor vitae rhoncus. Vivamus dolor id est porta, ut laoreet eros ultrices. Sed nec ipsum.</p>
                     </div>
                 </div>
-                <div class="portfolio__item col__4">
+                <div class="portfolio__item col__4 fade-in-up">
                     <img class="portfolio__image" src="${portfolioImg3}">
                     <div class="portfolio__content">
                         <span class="section__subtitle">${sectionInfo.subTitle}</span>

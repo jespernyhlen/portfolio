@@ -1,8 +1,16 @@
 $maxWidth: 1260px;
 
 .navbar {
-    height: 80px;
-    background: #fff;
+height: 80px;
+  background: rgba(196 129 64);
+  background: -moz-linear-gradient(right, rgba(196 129 64) 0%, rgba(248 215 177) 100%);
+  background: -webkit-gradient(linear, right top, right bottom, color-stop(0%, rgba(196 129 64)), color-stop(100%, rgba(248 215 177)));
+  background: -webkit-linear-gradient(right, rgba(196 129 64) 0%, rgba(248 215 177) 100%);
+  background: -o-linear-gradient(right, rgba(196 129 64) 0%, rgba(248 215 177) 100%);
+  background: -ms-linear-gradient(right, rgba(196 129 64) 0%, rgba(248 215 177) 100%);
+  background: linear-gradient(to right, rgb(196 129 64) 0%, rgb(248 215 177) 100%);
+
+
     color: #5b5b5b;
     overflow: hidden;
     position: fixed;
@@ -40,7 +48,7 @@ $maxWidth: 1260px;
                     padding: 15px 20px;
                     color: #555;
                     display: block;
-                    transition: color 0.1s ease-in-out;
+                    transition: all 0.1s ease-in-out;
                 }
 
                 a::after {
@@ -48,7 +56,7 @@ $maxWidth: 1260px;
                     display: block;
                     width: 0;
                     height: 2px;
-                    background: #da933f;
+                    background: #fff;
                     transition: width 0.3s;
                 }
 
@@ -56,8 +64,12 @@ $maxWidth: 1260px;
                     width: 100%;
                     //transition: width .3s;
                 }
+
+                a:hover {
+                    color: #fff;
+                }
                 a.active {
-                    color: $themeColor;
+                    color: #fff;
                 }
             }
         }

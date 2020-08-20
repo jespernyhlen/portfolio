@@ -1,5 +1,3 @@
-// import linkedinIcon from '../images/linkedin-icon.svg';
-
 const icons = {
     linkedin:
         "<svg class='social__link__icon' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path d='M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z'/></svg>",
@@ -26,8 +24,8 @@ const Footer = () => {
                     <span class="section__subtitle">${sectionInfo.subTitle}</span>
                     <h2 class="no__border">${sectionInfo.title}</h2>
                 </div>
-                <div class="contact__form__wrapper center__margin">
-                    <form id="form__id" class="form__class" method="post" action="">
+                <div class="contact__form__wrapper">
+                    <form id="form__id" class="form__class" method="POST" action="https://getform.io/f/94299acd-9a22-411c-a86f-739c6e149b59">
                 
                         <div class="form__group">
                             <label for="Name" class="hide__element">Ditt namn</label>
@@ -46,7 +44,7 @@ const Footer = () => {
                         <div class="form__group">
                             <label for="Message" class="hide__element">Ditt meddelande</label>
                             <div class="input__group">
-                                <textarea id="Message" name="Message" class="form__input" placeholder="Meddelande" rows="4" maxlength="3000" required></textarea>
+                                <textarea id="Message" name="Message" class="form__input" placeholder="Meddelande" rows="4" maxlength="500" required></textarea>
                             </div>
                         </div>
                 
@@ -58,13 +56,13 @@ const Footer = () => {
             </div>
             <div class="social__wrapper">
                 <div class="social__links center__margin">
-                    <a href="https://www.linkedin.com/in/jesper-nyhlen-478397192/" class="social__link">
+                    <a href="https://www.linkedin.com/in/jesper-nyhlen-478397192/" aria-label="linkedin footer" rel="noopener noreferrer" target="_blank" class="social__link">
                         ${icons.linkedin}
                     </a>
-                    <a href="https://github.com/jespernyhlen" class="social__link">
+                    <a href="https://github.com/jespernyhlen" aria-label="github footer" rel="noopener noreferrer" target="_blank" class="social__link">
                         ${icons.github}
                     </a>
-                    <a href="https://www.facebook.com/jesper.nyhlen" class="social__link">
+                    <a href="https://www.facebook.com/jesper.nyhlen" aria-label="facebook footer" rel="noopener noreferrer" target="_blank" class="social__link">
                         ${icons.facebook}
                     </a>
                 </div>
@@ -84,3 +82,18 @@ const Footer = () => {
 };
 
 export default Footer;
+
+// <div class="contact__form__wrapper center__margin kwes-form>
+//                     <form id="form__id" class="form__class" method="POST" action="https://kwes.io/api/foreign/forms/1cqXxvnWPvExGduYQOyG">
+//                             <label for="Name" class="hide__element">Ditt namn</label>
+//                                 <input type="text" id="Name" name="Name" placeholder="Namn" class="form__input" required maxlength="40" required rules="required|max:40">
+
+//                             <label for="Email" class="hide__element">Din epost</label>
+//                                 <input type="email" id="Email" name="Email" placeholder="Epost" class="form__input" required rules="required|email">
+
+//                             <label for="Message" class="hide__element">Ditt meddelande</label>
+//                                 <textarea id="Message" name="Message" class="form__input" placeholder="Meddelande" rows="4" maxlength="500" required rules="required|max:500"></textarea>
+
+//                             <button type="submit" id="form__button__id" class="form__btn__primary">Skicka meddelande</button>
+//                     </form>
+//                 </div>

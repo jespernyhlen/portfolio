@@ -1,12 +1,8 @@
 $maxWidth: 1170px;
 
 #home {
-    background: #f0f9fc;
-    background: -webkit-linear-gradient(to top, #fafbff, #fbfeff);
-    background: linear-gradient(to top, #fafbff, #fbfeff);
-
     &.container__wrapper {
-        padding: 150px 0;
+        padding: 150px 20px;
         margin: 0 auto;
         display: flex;
         -ms-flex-align: center;
@@ -21,12 +17,56 @@ $maxWidth: 1170px;
             background-image: url('https://images.unsplash.com/photo-1519120944692-1a8d8cfc107f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80');
             background-size: cover;
             background-position: 0% 40%;
+            background: rgba(243, 187, 124, 0.6);
+            background: -moz-linear-gradient(
+                    right,
+                    rgba(187, 112, 30, 0.88) 0%,
+                    rgba(243, 187, 124, 0.6) 100%
+                ),
+                url('https://images.unsplash.com/photo-1519120944692-1a8d8cfc107f?auto=format&fit=crop&ixlib=rb-1.2.1&q=80&w=1352')
+                    50% 20% no-repeat;
+            background: -webkit-gradient(
+                    linear,
+                    left top,
+                    left bottom,
+                    color-stop(0%, rgba(187, 112, 30, 0.88)),
+                    color-stop(100%, rgba(243, 187, 124, 0.6))
+                ),
+                url('https://images.unsplash.com/photo-1519120944692-1a8d8cfc107f?auto=format&fit=crop&ixlib=rb-1.2.1&q=80&w=1352')
+                    50% 20% no-repeat;
+            background: -webkit-linear-gradient(
+                    right,
+                    rgba(187, 112, 30, 0.88) 0%,
+                    rgba(243, 187, 124, 0.6) 100%
+                ),
+                url('https://images.unsplash.com/photo-1519120944692-1a8d8cfc107f?auto=format&fit=crop&ixlib=rb-1.2.1&q=80&w=1352')
+                    50% 20% no-repeat;
+            background: -o-linear-gradient(
+                    right,
+                    rgba(187, 112, 30, 0.88) 0%,
+                    rgba(243, 187, 124, 0.6) 100%
+                ),
+                url('https://images.unsplash.com/photo-1519120944692-1a8d8cfc107f?auto=format&fit=crop&ixlib=rb-1.2.1&q=80&w=1352')
+                    50% 20% no-repeat;
+            background: -ms-linear-gradient(
+                    right,
+                    rgba(187, 112, 30, 0.88) 0%,
+                    rgba(243, 187, 124, 0.6) 100%
+                ),
+                url('https://images.unsplash.com/photo-1519120944692-1a8d8cfc107f?auto=format&fit=crop&ixlib=rb-1.2.1&q=80&w=1352')
+                    50% 20% no-repeat;
+            background: linear-gradient(
+                    to right,
+                    rgb(187 112 30 / 88%) 0%,
+                    rgb(243 187 124 / 60%) 100%
+                ),
+                url('https://images.unsplash.com/photo-1519120944692-1a8d8cfc107f?auto=format&fit=crop&ixlib=rb-1.2.1&q=80&w=1352')
+                    50% 20% no-repeat;
         }
 
         .container {
             width: 100%;
             max-width: 640px;
-            text-align: left;
 
             .header__title__wrapper {
             }
@@ -38,23 +78,60 @@ $maxWidth: 1170px;
             .header__title,
             .header__sub__title {
                 display: inline-block;
-                letter-spacing: 7.5px;
+                margin-bottom: 10px;
             }
 
             .header__title {
-                // background: #f5e0c6;
-                background: $lightThemeColor;
                 color: #fff;
                 width: 100%;
                 text-align: center;
-                margin-bottom: 5px;
+                margin-bottom: 0;
+                font-size: 80px;
+                font-weight: bold;
+                letter-spacing: 4px;
+
+                @media screen and (max-width: 776px) {
+                    font-size: 40px;
+                    margin-bottom: 20px;
+                }
             }
 
             .header__sub__title {
                 padding: 0 10px;
-                border-bottom: 1px solid $themeColor;
-                padding-bottom: 10px;
-                color: #555;
+                padding: 10px 20px 10px 10px;
+                color: #fff;
+                font-size: 16px;
+                letter-spacing: 2px;
+
+                a {
+                    color: #fff;
+                    transition: 0.2s all;
+
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+
+        .social__wrapper {
+            .social__links {
+                max-width: 150px;
+                text-align: center;
+                margin-top: 30px;
+                display: flex;
+                justify-content: space-between;
+
+                svg.social__link__icon {
+                    fill: #fff;
+                    height: 40px;
+                    width: 40px;
+                    padding: 10px;
+                    transition: all 0.15s;
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                }
             }
         }
     }

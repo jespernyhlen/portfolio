@@ -5,7 +5,6 @@ import smoothscroll from 'smoothscroll-polyfill';
 const app = async () => {
     smoothscroll.polyfill();
     document.getElementById('app').appendChild(await App());
-
     function onScroll() {
         var removeActiveClass = function (elements) {
             for (var i = 0; i < elements.length; ++i) {
@@ -64,7 +63,7 @@ const app = async () => {
             setTimeout(() => {
                 e.classList.add('appear');
                 res();
-            }, 20);
+            }, 150);
         });
     }
 

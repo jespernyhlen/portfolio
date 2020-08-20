@@ -3,3 +3,7 @@ development
 .cache
 src/images/*
 src/.DS_Store
+.DS_Store
+dist.zip
+dist/
+thank-you-page/

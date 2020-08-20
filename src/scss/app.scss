@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Questrial&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&family=Roboto:wght@100;300;400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;300;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 
 $themeColor: #da933f;
 $lightThemeColor: lighten($themeColor, 28%);
@@ -48,6 +51,8 @@ h3,
 h4,
 h5 {
     font-weight: 400;
+    color: #333;
+    font-family: 'Questrial', sans-serif;
 }
 
 a {
@@ -57,8 +62,9 @@ a {
 p {
     font-size: 13px;
     line-height: 26px;
-    color: #777;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
+    color: #222;
+    font-weight: 300;
 }
 
 h1 {
@@ -89,6 +95,11 @@ body {
     text-rendering: optimizeSpeed;
     line-height: 1.5;
     // font-family: 'Roboto', sans-serif;
+    // font-family: 'Questrial', sans-serif;
+    font-family: 'Catamaran', sans-serif;
+}
+
+span {
     font-family: 'Questrial', sans-serif;
 }
 
@@ -193,7 +204,7 @@ p + p {
 }
 
 .text__darkgrey {
-    color: #444 !important;
+    color: #333 !important;
 }
 
 .text__lightgrey {
@@ -284,10 +295,6 @@ p + p {
         font-size: 32px;
         line-height: 40px;
     }
-    .container__wrapper {
-        padding-left: 20px !important;
-        padding-right: 20px !important;
-    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -351,6 +358,6 @@ p + p {
 
 @media only screen and (max-width: 500px) {
     h1 {
-        font-size: 36px;
+        font-size: 32px;
     }
 }

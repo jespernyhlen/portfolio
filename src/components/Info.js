@@ -1,13 +1,11 @@
-import profileImage from '../images/profileimage.png';
-
 const sectionInfo = {
-    subTitle: 'Välkommen till sidan',
+    subTitle: 'Min bakgrund',
     title:
-        'Lorem ipsum <span class="text__highlight"><br>dolo sit ame</span> ornare <br>consecte adipiscing.',
+        'Erfarenhet genom <span class="text__highlight"><br>utbildning</span> samt <br>egna projekt.',
     textContent:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mollis, lectus ac sollicitudin bibendum non, massa sem volutpat ex, eget iaculis urna arcu sed odio. Donec porta aliquet est eget placerat. Morbi a tincidunt arcu. Pellentesque ut erat hendrerit leo blandit gravida. Phasellus ac augue nunc. Aenean nulla tortor, non condimentum nec.',
+        'För att fördjupa mig i branschen tog jag våren 2020 ut min högskoleexamen i programvaruteknik, med inriktning webbprogrammering. Detta efter två års studier på Blekinge Tekniska Högskola. Webbtjänster utvecklades på både klient- och serversidan och innefattade kurser i bland annat HTML, CSS, Python, PHP, JavaScript, databaser, NodeJS, SQL, Docker, testning, Git, öppen källkod och diverse utvecklingsverktyg.',
     textSubContent:
-        'Maecenas commodo posuere egestas. Maecenas placerat justo nunc, sit amet malesuada ex viverra quis. Duis pharetra dolor vitae rhoncus. Vivamus dolor id est porta, ut laoreet eros ultrices. Sed nec ipsum.',
+        'Med det ökade intressat har kunskapen utökats och även skapat en erfarenhet med bland annat SASS/LESS, React/React Native, Gatsby, Google AMP, Wordpress och utveckling via headless CMS. Men i tillägg till min nuvarande kunskap ser jag fram emot nya utmaningar och fortsatt utveckling.',
 };
 
 const Info = () => {
@@ -34,3 +32,4 @@ const Info = () => {
 };
 
 export default Info;
+

@@ -9,8 +9,8 @@ async function App() {
     const template = document.createElement('template');
 
     template.innerHTML = `
-    <div class="content-wrapper">
-      ${Navbar()}
+    ${Navbar()}
+    <main class="content-wrapper">
       ${Header()}
       ${About()}
       ${Info()}

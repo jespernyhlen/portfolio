@@ -1,7 +1,6 @@
 #footer {
     &.container__wrapper {
-        padding: 50px 0;
-
+        padding: 50px 20px;
         background: #f8f8f8;
         background: -webkit-linear-gradient(to right, #f8f8f8, #fbfbfb);
         background: linear-gradient(to right, #f8f8f8, #fbfbfb);
@@ -20,6 +19,10 @@
             }
 
             .row {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                justify-content: center;
                 flex: 1 0 auto;
 
                 .contact__form__wrapper {
@@ -81,8 +84,15 @@
         }
 
         textarea.form__input {
-            font-family: -apple-system, Arial, sans-serif;
             height: auto;
+        }
+
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        input:-webkit-autofill:active {
+            transition: background-color 5000s ease-in-out 0s;
+            -webkit-text-fill-color: #111 !important;
         }
 
         @media (prefers-reduced-motion: reduce) {

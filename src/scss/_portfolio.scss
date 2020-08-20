@@ -2,7 +2,8 @@
     background: #fff;
 
     &.container__wrapper {
-        padding: 50px 0;
+        padding: 50px 20px;
+
         display: flex;
         -ms-flex-align: center;
         align-items: center;
@@ -27,31 +28,65 @@
                 .portfolio__item {
                     margin: 10px;
                     text-align: left;
+                    margin: 0 auto;
+
+                    .image__container {
+                        margin-bottom: 10px;
+
+                        .image__container__inner {
+                            overflow: hidden;
+                        }
+                    }
+
+                    .portfolio__btn__container {
+                        margin-top: 1.5rem;
+                        .portfolio__btn {
+                            color: #da933f;
+                            background-color: transparent;
+                            border-bottom: 1px solid #da933f;
+                            font-size: 13px;
+                            padding: 0.375rem 0;
+                            letter-spacing: 2px;
+                            margin-right: 2rem;
+                            transition: all 0.15s;
+
+                            &:hover {
+                                color: $lightThemeColor;
+                                border-color: $lightThemeColor;
+                            }
+                        }
+                    }
 
                     @media only screen and (max-width: 768px) {
                         margin: 0 0 70px 0;
                     }
 
                     .portfolio__image {
-                        margin: 10px 10px 10px 0;
-                        box-shadow: 0 6px 60px 0 rgba(0, 0, 0, 0.15);
+                        transform: translateX(-10px) scale(1.1);
                         z-index: 1;
                     }
 
                     h3 {
-                        margin-bottom: 15px;
+                        margin-bottom: 0.5rem;
+                        font-weight: bold;
+                        letter-spacing: 1px;
                     }
 
                     .category__tag__wrapper {
                         margin-bottom: 15px;
+                        display: flex;
+                        flex-wrap: wrap;
 
-                        span.category__tag {
-                            border: 1px solid #da933e;
-                            padding: 5px 10px;
-                            border-radius: 30px;
-                            color: #da933e;
-                            margin: 10px;
-                            margin-left: 0;
+                        span {
+                            background: #da933e;
+                            padding: 0.25rem 0.666rem;
+                            color: #fff;
+                            border-radius: 15px;
+                            margin: 0 7.5px 0.5rem 0;
+                            font-size: 12px;
+                            font-weight: 100;
+                            letter-spacing: 0.5px;
+                            line-height: initial;
                         }
                     }
 

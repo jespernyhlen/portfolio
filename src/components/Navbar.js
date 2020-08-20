@@ -5,13 +5,13 @@ const Navbar = () => {
     <nav class="navbar">
         <div class="navbar__desktop">
             <a class="nav__logo__link">
-                <img class="navbar__logo" src="${navLogo}">
+                <img class="navbar__logo" src="${navLogo}" alt="Sidans logo">
             </a>
             <div class="navbar__links">
                 <ul>
                     <li><a class="active" href="#home">Hem</a></li>
                     <li><a href="#about">Om mig</a></li>
-                    <li><a href="#info">Info</a></li>
+                    <li><a href="#info">Bakgrund</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#footer">Kontakt</a></li>
                 </ul>

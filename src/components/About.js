@@ -19,7 +19,7 @@ const About = () => {
                     <p class="fade-in-left">${sectionInfo.contentText}</p>
                 </div>
                 <div class="image__col col__6 fade-in-right">
-                    <img class="profile__image" src="${profileImage}">
+                    <img class="profile__image" src="${profileImage}" alt="Profilbild">
                 </div>
             </image>
         </div>

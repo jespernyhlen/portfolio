@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Questrial&family=Roboto:wght@100;300;400;500;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;300;500;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 
 $themeColor: #da933f;
@@ -191,6 +190,10 @@ span.section__subtitle + h2 {
     margin-top: 15px;
 }
 
+main {
+    overflow-x: hidden;
+}
+
 h2 {
     margin-bottom: 30px;
 }
@@ -239,26 +242,20 @@ p + p {
     width: 1px;
 }
 
-// .fade-in-up {
-//     opacity: 0;
-//     transform: translateY(50%);
-//     transition: opacity 250ms ease-in, transform 400ms ease-in;
-// }
-
-// .fade-in-up.appear {
-//     transform: translateY(0);
-//     opacity: 1;
-// }
-
 .fade-in {
     opacity: 0;
-    transform: translateY(15%);
     transition: opacity 350ms ease-in, transform 300ms ease-in;
 }
 
 .fade-in-up {
     opacity: 0;
     transform: translateY(15%);
+    transition: opacity 500ms ease-in, transform 300ms ease-in;
+}
+
+.fade-in-down {
+    opacity: 0;
+    transform: translateY(-15%);
     transition: opacity 350ms ease-in, transform 300ms ease-in;
 }
 
@@ -275,11 +272,11 @@ p + p {
 }
 
 .fade-in.appear {
-    transform: translateY(0);
     opacity: 1;
 }
 
-.fade-in-up.appear {
+.fade-in-up.appear,
+.fade-in-down.appear {
     transform: translateY(0);
     opacity: 1;
 }
@@ -294,6 +291,12 @@ p + p {
     h2 {
         font-size: 32px;
         line-height: 40px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .col__12 {
+        max-width: 600px;
     }
 }
 
@@ -324,7 +327,7 @@ p + p {
 
     [class*='col__'] {
         width: 100%;
-        max-width: 500px;
+        max-width: 600px;
     }
 
     .text__content {

@@ -1,3 +1,5 @@
+import { language } from '../constants';
+
 const icons = {
     linkedin:
         "<svg class='social__link__icon' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path d='M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z'/></svg>",
@@ -8,30 +10,37 @@ const icons = {
 };
 
 const headerInfo = {
-    title: '<span class="text__darkgrey">Jesper</span> Nyhlén',
-    subTitle:
-        'Webbutvecklare - <a href="mailto:jespernyhlen@gmail.com" aria-label="Email">jespernyhlen@gmail.com</a> - <a href="tel:+46734627595" aria-label="Phone">073 - 462 75 95</a>',
+    swedish: {
+        title: '<span class="text__darkgrey">Jesper</span> Nyhlén',
+        subTitle:
+            '<span class="header__detail">Webbutvecklare</span> <span class="divider__line">-</span> <span class="header__detail"><a href="mailto:jespernyhlen@gmail.com" aria-label="Email">Jespernyhlen@gmail.com</a></span> <span class="divider__line">-</span> <span class="header__detail"><a href="tel:+46734627595" aria-label="Phone">073-4627595</a></span>',
+    },
+    english: {
+        title: '<span class="text__darkgrey">Jesper</span> Nyhlén',
+        subTitle:
+            '<span class="header__detail">Web developer</span> <span class="divider__line">-</span> <span class="header__detail"><a href="mailto:jespernyhlen@gmail.com" aria-label="Email">Jespernyhlen@gmail.com</a></span> <span class="divider__line">-</span> <span class="header__detail"><a href="tel:+46734627595" aria-label="Phone">+46734627595</a></span>',
+    },
 };
 
 const Header = () => {
     const template = `
-    <header id="home" class="container__wrapper bg__image fade-in">
+    <header id="home" class="container__wrapper bg__image">
         <div class="container">
           <div class="header__title__wrapper">
             <div class="header__title__container">
-              <h1 class="header__title fade-in-left">
-                ${headerInfo.title}
+              <h1 class="header__title fade-in-up">
+                ${headerInfo[language].title}
               </h1>
             </div>
           </div>
           <div class="header__sub__title__wrapper">
             <div class="header__sub__title__container">
-              <h2 class="header__sub__title fade-in-left">
-                ${headerInfo.subTitle}
+              <h2 class="header__sub__title  fade-in-up">
+                ${headerInfo[language].subTitle}
               </h2>
             </div>
           </div>
-          <div class="social__wrapper">
+          <div class="social__wrapper fade-in-up">
                 <div class="social__links center__margin">
                     <a href="https://www.linkedin.com/in/jesper-nyhlen-478397192/" aria-label="Linkedin" rel="noopener noreferrer" target="_blank" class="social__link">
                         ${icons.linkedin}
@@ -45,6 +54,10 @@ const Header = () => {
                 </div>
             </div>
         </div>
+        <div class="fog-container fade-in">
+        <div class="fog-img fog-img-first"></div>
+        <div class="fog-img fog-img-second"></div>
+      </div>
     </header>
   `;
 

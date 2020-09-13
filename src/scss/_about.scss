@@ -11,7 +11,7 @@ $maxWidth: 1170px;
         align-items: center;
         -ms-flex-pack: center;
         justify-content: center;
-        min-height: 100vh;
+        min-height: calc(100vh - 80px);
         position: relative;
 
         .container {
@@ -41,7 +41,26 @@ $maxWidth: 1170px;
                 .image__col {
                     box-shadow: 0 6px 60px 0 rgba(0, 0, 0, 0.25);
                     z-index: 1;
+                    overflow: hidden;
                     filter: saturate(0.5);
+
+                    .image__left__reveal {
+                        position: absolute;
+                        height: 100%;
+                        width: 56%;
+                        background: #f8f8f8;
+                        left: 0;
+                        top: 0;
+                    }
+
+                    .image__right__reveal {
+                        position: absolute;
+                        height: 100%;
+                        width: 56%;
+                        background: #ffffff;
+                        right: 0;
+                        top: 0;
+                    }
 
                     img {
                         padding: 10px 0 0 15px;

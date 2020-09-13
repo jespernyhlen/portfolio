@@ -5,13 +5,15 @@ import smoothscroll from 'smoothscroll-polyfill';
 const app = async () => {
     smoothscroll.polyfill();
     document.getElementById('app').appendChild(await App());
+
     function onScroll() {
         var removeActiveClass = function (elements) {
             for (var i = 0; i < elements.length; ++i) {
                 elements[i].classList.remove('active');
             }
         };
-        var anchors = document.querySelectorAll('.navbar__links > ul > li > a');
+        var anchors = document.querySelectorAll('.navbar__links > li > a');
+
         var previousRefElement = null;
         for (var i = 0; i < anchors.length; ++i) {
             var currentRefElement = document.getElementById(
@@ -19,6 +21,7 @@ const app = async () => {
             );
             var currentRefElementTop =
                 currentRefElement.getBoundingClientRect().top - 180;
+
             if (currentRefElementTop <= 0) {
                 previousRefElement = anchors[i];
                 if (i == anchors.length - 1) {
@@ -26,24 +29,38 @@ const app = async () => {
                     anchors[i].classList.add('active');
                 }
             } else {
-                removeActiveClass(anchors);
-                previousRefElement.classList.add('active');
+                if (!previousRefElement.classList.contains('active')) {
+                    removeActiveClass(anchors);
+                    previousRefElement.classList.add('active');
+                }
+
                 break;
             }
         }
     }
     window.onscroll = onScroll;
 
+    window.addEventListener('scroll', () => {
+        let position = window.scrollY;
+        var navbar = document.getElementById('navbar');
+
+        if (position >= 40) {
+            navbar.classList.add('scrolled__navbar');
+        } else {
+            navbar.classList.remove('scrolled__navbar');
+        }
+    });
+
     let siteSections = ['home', 'about', 'info', 'portfolio', 'footer'];
 
-    let navlinks = document.querySelectorAll('.navbar__links > ul > li');
+    let navlinks = document.querySelectorAll('.navbar__links > li');
     navlinks.forEach(function (link, index) {
         link.firstChild.addEventListener('click', function (e) {
             e.preventDefault();
             // let headerHeight = 80; /* PUT HEADER HEIGHT HERE */
             // let buffer = 40; /* MAY NOT BE NEEDED */
 
-            let headerHeight = 0; /* PUT HEADER HEIGHT HERE */
+            let headerHeight = 80; /* PUT HEADER HEIGHT HERE */
             let buffer = 0; /* MAY NOT BE NEEDED */
 
             let element = document.getElementById(siteSections[index]);
@@ -53,6 +70,7 @@ const app = async () => {
                 element.getBoundingClientRect().top -
                 headerHeight -
                 buffer;
+
             window.scroll({ top: topOfElement, behavior: 'smooth' });
         });
     });
@@ -69,8 +87,13 @@ const app = async () => {
 
     const faders = document.querySelectorAll('.fade-in');
     const fadersUp = document.querySelectorAll('.fade-in-up');
+    const fadersDown = document.querySelectorAll('.fade-in-down');
     const fadersLeft = document.querySelectorAll('.fade-in-left');
     const fadersRight = document.querySelectorAll('.fade-in-right');
+    const fadersLeftReveal = document.querySelectorAll('.fade-in-left-reveal');
+    const fadersRightReveal = document.querySelectorAll(
+        '.fade-in-right-reveal'
+    );
 
     const appearOptions = {
         threshold: 0,
@@ -99,11 +122,23 @@ const app = async () => {
         appearOnScroll.observe(fader);
     });
 
+    fadersDown.forEach((fader) => {
+        appearOnScroll.observe(fader);
+    });
+
     fadersLeft.forEach((fader) => {
         appearOnScroll.observe(fader);
     });
 
     fadersRight.forEach((fader) => {
+        appearOnScroll.observe(fader);
+    });
+
+    fadersLeftReveal.forEach((fader) => {
+        appearOnScroll.observe(fader);
+    });
+
+    fadersRightReveal.forEach((fader) => {
         appearOnScroll.observe(fader);
     });
 };

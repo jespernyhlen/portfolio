@@ -230,6 +230,10 @@ p + p {
     border: 0 !important;
 }
 
+.hide {
+    display: none;
+}
+
 .hide__element {
     border: 0;
     clip: rect(1px 1px 1px 1px); /* IE6, IE7 */

@@ -1,6 +1,8 @@
 import portfolioImg1 from '../images/portfolio-marene.png';
 import portfolioImg2 from '../images/portfolio-movies.png';
 import portfolioImg3 from '../images/portfolio-auth.png';
+import portfolioImg4 from '../images/portfolio-portfolio.png';
+
 import { language } from '../constants';
 
 const projects = {
@@ -72,6 +74,24 @@ const projects = {
             githubLink: 'https://github.com/jespernyhlen/auth-mern',
             badges: `<span>React</span><span>NodeJS</span><span>Express</span><span>MongoDB</span><span>Nginx</span><span>JavaScript</span><span>CSS</span>`,
         },
+        personal: {
+            img: portfolioImg4,
+            swedish: {
+                subTitle: 'Projekt',
+                title: 'Portfolio',
+                textContent:
+                    'Min personliga webbplats för att förmedla vem jag är och vad jag har gjort. Byggd med HTML, JavaScript, CSS / SASS. Webbutveckling, UX / design och drift.',
+            },
+            english: {
+                subTitle: 'Project',
+                title: 'Portfolio',
+                textContent:
+                    'My personal website to convey who I am and what I have done. Built with HTML, JavaScript, CSS / SASS. Web development, UX / design and operation.',
+            },
+            websiteLink: null,
+            githubLink: 'https://github.com/jespernyhlen/portfolio',
+            badges: `<span>HTML</span><span>JavaScript</span><span>CSS</span><span>Sass</span>`,
+        },
     },
 };
 
@@ -93,18 +113,32 @@ const portfolioItems = () => {
             <div class="portfolio__item col__12 fade-in-up">
                 <div class="image__container">
                     <div class="image__container__inner">
-                        <img class="portfolio__image" src="${projectRef.img}" alt="${projectRef[language].title} image">
+                        <img class="portfolio__image" src="${
+                            projectRef.img
+                        }" alt="${projectRef[language].title} image">
                     </div>
                     <div class="portfolio__content">
-                        <span class="section__subtitle">${projectRef[language].subTitle}</span>
+                        <span class="section__subtitle">${
+                            projectRef[language].subTitle
+                        }</span>
                         <h3>${projectRef[language].title}</h3>
                         <div class="category__tag__wrapper">
                             ${projectRef.badges}
                         </div>
                         <p>${projectRef[language].textContent}</p>
                         <div class="portfolio__btn__container">
-                            <a href="${projectRef.websiteLink}" aria-label="github ${projectRef.title}" rel="noopener noreferrer" target="_blank" class="portfolio__btn">${websiteLabel} <span>${btnArrow}</span></a>
-                            <a href="${projectRef.githubLink}" aria-label="github ${projectRef.title}" rel="noopener noreferrer" target="_blank" class="portfolio__btn">${githubLabel} <span>${btnArrow}</span></a>
+                            <a href="${
+                                projectRef.websiteLink
+                            }" aria-label="github ${
+                projectRef.title
+            }" rel="noopener noreferrer" target="_blank" class="portfolio__btn ${
+                projectRef.websiteLink ? '' : 'hide'
+            }">${websiteLabel} <span>${btnArrow}</span></a>
+                            <a href="${
+                                projectRef.githubLink
+                            }" aria-label="github ${
+                projectRef.title
+            }" rel="noopener noreferrer" target="_blank" class="portfolio__btn">${githubLabel} <span>${btnArrow}</span></a>
                         </div>
                     </div>
                 </div>

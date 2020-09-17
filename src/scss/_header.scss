@@ -1,4 +1,6 @@
 $maxWidth: 1170px;
+$mainTextColor: #fff;
+$subTextColor: #333;
 
 #home {
     .fog-container {
@@ -16,7 +18,7 @@ $maxWidth: 1170px;
             left: 0;
             top: 0;
 
-            @media only screen and (max-width: 768px) {
+            @media only screen and (max-width: $mobileWidth) {
                 display: none;
             }
         }
@@ -57,7 +59,6 @@ $maxWidth: 1170px;
         -ms-flex-pack: center;
         justify-content: center;
         min-height: 100vh;
-
         text-align: center !important;
 
         &.bg__image {
@@ -116,22 +117,16 @@ $maxWidth: 1170px;
             max-width: 640px;
             z-index: 8;
 
-            .header__title__wrapper {
-            }
-
-            .header__sub__title__wrapper {
-                margin-top: 10px;
-            }
-
             .header__title,
             .header__sub__title {
                 display: inline-block;
                 margin-bottom: 10px;
                 border-left: 0;
+                margin-top: 10px;
             }
 
             .header__title {
-                color: #fff;
+                color: $mainTextColor;
                 width: 100%;
                 text-align: center;
                 margin-bottom: 0;
@@ -139,31 +134,34 @@ $maxWidth: 1170px;
                 font-weight: bold;
                 letter-spacing: 4px;
 
-                @media screen and (max-width: 776px) {
+                span {
+                    color: $subTextColor;
+                }
+
+                @media screen and (max-width: $mobileWidth) {
                     font-size: 40px;
                     margin-bottom: 20px;
                 }
             }
 
             .header__sub__title {
-                color: #fff;
+                color: $mainTextColor;
                 font-size: 16px;
-                letter-spacing: 2px;
                 background: #25252514;
                 padding: 0 30px;
                 box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.02);
                 letter-spacing: 1.75px;
 
                 a {
-                    color: #fff;
-                    transition: 0.2s all;
+                    color: $mainTextColor;
+                    transition: 0.2s opacity;
 
                     &:hover {
                         opacity: 0.7;
                     }
                 }
 
-                @media screen and (max-width: 768px) {
+                @media screen and (max-width: $mobileWidth) {
                     display: flex;
                     flex-direction: column;
                     padding: 10px 20px;
@@ -184,7 +182,7 @@ $maxWidth: 1170px;
                 justify-content: space-between;
 
                 svg.social__link__icon {
-                    fill: #fff;
+                    fill: $mainTextColor;
                     height: 40px;
                     width: 40px;
                     padding: 10px;

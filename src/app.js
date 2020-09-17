@@ -10,13 +10,14 @@ async function App() {
 
     template.innerHTML = `
     ${Navbar()}
+    ${Header()}
     <main class="content-wrapper">
-      ${Header()}
       ${About()}
       ${Info()}
       ${Portfolio()}
-      ${Footer()}
-    </>
+    </main>
+    ${Footer()}
+
   `;
     // Return a new node from template
     return template.content.cloneNode(true);

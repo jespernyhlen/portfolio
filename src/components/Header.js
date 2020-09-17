@@ -11,12 +11,12 @@ const icons = {
 
 const headerInfo = {
     swedish: {
-        title: '<span class="text__darkgrey">Jesper</span> Nyhlén',
+        title: '<span>Jesper</span> Nyhlén',
         subTitle:
             '<span class="header__detail">Webbutvecklare</span> <span class="divider__line">-</span> <span class="header__detail"><a href="mailto:jespernyhlen@gmail.com" aria-label="Email">Jespernyhlen@gmail.com</a></span> <span class="divider__line">-</span> <span class="header__detail"><a href="tel:+46734627595" aria-label="Phone">073-4627595</a></span>',
     },
     english: {
-        title: '<span class="text__darkgrey">Jesper</span> Nyhlén',
+        title: '<span>Jesper</span> Nyhlén',
         subTitle:
             '<span class="header__detail">Web developer</span> <span class="divider__line">-</span> <span class="header__detail"><a href="mailto:jespernyhlen@gmail.com" aria-label="Email">Jespernyhlen@gmail.com</a></span> <span class="divider__line">-</span> <span class="header__detail"><a href="tel:+46734627595" aria-label="Phone">+46734627595</a></span>',
     },
@@ -26,20 +26,12 @@ const Header = () => {
     const template = `
     <header id="home" class="container__wrapper bg__image">
         <div class="container">
-          <div class="header__title__wrapper">
-            <div class="header__title__container">
               <h1 class="header__title fade-in-up">
                 ${headerInfo[language].title}
               </h1>
-            </div>
-          </div>
-          <div class="header__sub__title__wrapper">
-            <div class="header__sub__title__container">
               <h2 class="header__sub__title  fade-in-up">
                 ${headerInfo[language].subTitle}
               </h2>
-            </div>
-          </div>
           <div class="social__wrapper fade-in-up">
                 <div class="social__links center__margin">
                     <a href="https://www.linkedin.com/in/jesper-nyhlen-478397192/" aria-label="Linkedin" rel="noopener noreferrer" target="_blank" class="social__link">

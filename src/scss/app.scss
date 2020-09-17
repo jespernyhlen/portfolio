@@ -2,9 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;300;500;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 
-$themeColor: #da933f;
-$lightThemeColor: lighten($themeColor, 28%);
-
+@import 'variables';
 @import 'navbar';
 @import 'header';
 @import 'about';
@@ -192,6 +190,7 @@ span.section__subtitle + h2 {
 
 main {
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 h2 {

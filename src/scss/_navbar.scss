@@ -1,4 +1,7 @@
 $maxWidth: 1260px;
+$navTextColor: #333;
+$navTextColorScrolled: #222;
+$navActiveTextColor: #fff;
 
 .navbar {
     position: fixed;
@@ -8,7 +11,7 @@ $maxWidth: 1260px;
 
     transition: 0.5s all;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $mobileWidth) {
         background: #c48140;
         background: -moz-linear-gradient(right, #da8d3c 0, #e9b784 100%);
         background: -webkit-gradient(
@@ -26,16 +29,13 @@ $maxWidth: 1260px;
     }
 
     &.scrolled__navbar {
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: $mobileWidth) {
             background: #e4a260;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.02);
         }
 
-        .nav__logo__link .navbar__logo {
-        }
-
-        li a {
-            color: #222;
+        a {
+            color: $navTextColorScrolled;
         }
     }
 
@@ -51,38 +51,36 @@ $maxWidth: 1260px;
         overflow: hidden;
     }
 
-    li {
-        a {
+    a {
+        display: block;
+        padding: 15px 20px;
+        text-decoration: none;
+        color: $navTextColor;
+        display: block;
+        transition: all 0.1s ease-in-out;
+        width: fit-content;
+        margin: 0 auto;
+        letter-spacing: 1px;
+
+        &:hover {
+            color: $navActiveTextColor;
+        }
+        &.active {
+            color: $navActiveTextColor;
+        }
+
+        &::after {
+            content: '';
             display: block;
-            padding: 15px 20px;
-            text-decoration: none;
-            color: #333;
-            display: block;
-            transition: all 0.1s ease-in-out;
-            width: fit-content;
-            margin: 0 auto;
-            letter-spacing: 1px;
+            width: 0;
+            height: 2px;
+            background: $navActiveTextColor;
+            transition: width 0.3s;
+        }
 
-            &:hover {
-                color: #fff;
-            }
-            &.active {
-                color: #fff;
-            }
-
-            &::after {
-                content: '';
-                display: block;
-                width: 0;
-                height: 2px;
-                background: #fff;
-                transition: width 0.3s;
-            }
-
-            &:hover::after {
-                width: 100%;
-                //transition: width .3s;
-            }
+        &:hover::after {
+            width: 100%;
+            //transition: width .3s;
         }
     }
 
@@ -178,7 +176,7 @@ $maxWidth: 1260px;
         }
     }
 
-    @media (min-width: 48em) {
+    @media (min-width: $mobileWidth) {
         .nav__logo__link {
             height: 80px;
             .navbar__logo {
@@ -190,7 +188,7 @@ $maxWidth: 1260px;
         li {
             float: left;
         }
-        li a {
+        a {
             padding: 30px 20px;
         }
         .menu {
@@ -203,105 +201,3 @@ $maxWidth: 1260px;
         }
     }
 }
-
-// $maxWidth: 1260px;
-
-// .navbar {
-//     height: 80px;
-//     background: rgba(196 129 64);
-//     background: -moz-linear-gradient(
-//         right,
-//         rgba(196 129 64) 0%,
-//         rgba(248 215 177) 100%
-//     );
-//     background: -webkit-gradient(
-//         linear,
-//         right top,
-//         right bottom,
-//         color-stop(0%, rgba(196 129 64)),
-//         color-stop(100%, rgba(248 215 177))
-//     );
-//     background: -webkit-linear-gradient(
-//         right,
-//         rgba(196 129 64) 0%,
-//         rgba(248 215 177) 100%
-//     );
-//     background: -o-linear-gradient(
-//         right,
-//         rgba(196 129 64) 0%,
-//         rgba(248 215 177) 100%
-//     );
-//     background: -ms-linear-gradient(
-//         right,
-//         rgba(196 129 64) 0%,
-//         rgba(248 215 177) 100%
-//     );
-//     background: linear-gradient(
-//         to right,
-//         rgb(196 129 64) 0%,
-//         rgb(248 215 177) 100%
-//     );
-
-//     color: #5b5b5b;
-//     position: fixed;
-//     width: 100%;
-//     z-index: 10;
-
-//     .navbar__desktop {
-//         height: 100%;
-//         max-width: $maxWidth;
-//         padding-left: 20px;
-//         padding-right: 20px;
-//         margin: 0 auto;
-//         display: flex;
-//         justify-content: space-between;
-//         align-items: center;
-
-//         .nav__logo__link {
-//             height: 120px;
-//             .navbar__logo {
-//                 height: 100%;
-//             }
-//         }
-
-//         .navbar__links {
-//             display: flex;
-
-//             @media only screen and (max-width: 770px) {
-//                 display: none;
-//             }
-
-//             ul {
-//                 display: flex;
-
-//                 a {
-//                     padding: 15px 20px;
-//                     color: #555;
-//                     display: block;
-//                     transition: all 0.1s ease-in-out;
-//                 }
-
-//                 a::after {
-//                     content: '';
-//                     display: block;
-//                     width: 0;
-//                     height: 2px;
-//                     background: #fff;
-//                     transition: width 0.3s;
-//                 }
-
-//                 a:hover::after {
-//                     width: 100%;
-//                     //transition: width .3s;
-//                 }
-
-//                 a:hover {
-//                     color: #fff;
-//                 }
-//                 a.active {
-//                     color: #fff;
-//                 }
-//             }
-//         }
-//     }
-// }

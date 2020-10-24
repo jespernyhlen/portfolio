@@ -72,15 +72,19 @@
                             transition: all 0.15s;
 
                             span {
-                                margin-left: 0rem;
+                                margin-left: 0;
                                 transition: all 0.15s;
                             }
 
                             &:hover {
                                 margin-right: 1.5rem;
-                                border-color: #ffb660;
+                                border-color: $semiLightThemeColor;
+                                color: $semiLightThemeColor;
                                 span {
                                     margin-left: 0.5rem;
+                                    path {
+                                        stroke: $semiLightThemeColor;
+                                    }
                                 }
                             }
                         }

@@ -9,6 +9,7 @@ $subTextColor: #333;
         height: 100%;
         overflow: hidden;
         z-index: 1;
+        filter: blur(10px);
 
         .fog-img {
             position: absolute;
@@ -147,9 +148,8 @@ $subTextColor: #333;
             .header__sub__title {
                 color: $mainTextColor;
                 font-size: 16px;
-                background: #25252514;
+                background: #ffffff14;
                 padding: 0 30px;
-                box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.02);
                 letter-spacing: 1.75px;
 
                 a {
@@ -186,9 +186,10 @@ $subTextColor: #333;
                     height: 40px;
                     width: 40px;
                     padding: 10px;
-                    transition: all 0.15s;
+                    transition: all 0.2s;
                     &:hover {
                         opacity: 0.7;
+                        transform: translateY(-2px);
                     }
                 }
             }

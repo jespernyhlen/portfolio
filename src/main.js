@@ -81,7 +81,7 @@ const app = async () => {
             setTimeout(() => {
                 e.classList.add('appear');
                 res();
-            }, 150);
+            }, 75);
         });
     }
 

@@ -2,6 +2,7 @@ import portfolioImg1 from '../images/portfolio-marene.png';
 import portfolioImg2 from '../images/portfolio-movies.png';
 import portfolioImg3 from '../images/portfolio-auth.png';
 import portfolioImg4 from '../images/portfolio-portfolio.png';
+import portfolioImg5 from '../images/portfolio-webtrello.png';
 
 import { language } from '../constants';
 
@@ -37,6 +38,24 @@ const projects = {
             githubLink: 'https://github.com/jespernyhlen/villamarene-v1',
             badges: `<span>Gatsby</span><span>Contentful</span><span>GraphQL</span><span>JavaScript</span><span>CSS</span>`,
         },
+        webtrello: {
+            img: portfolioImg5,
+            swedish: {
+                subTitle: 'Projekt',
+                title: 'Webtrello',
+                textContent:
+                    'En plattform under utbyggnad. Registrerade användare kan skapa kankan-boards för att enkelt lägga in och överblicka aktiviteter med hjälp av drag and drop teknik. Det är även möjligt att skapa teams för att tilldela medlemmar till specifika aktiviteter. Byggd med React, Node.js, Express och MongoDB. Webbutveckling, UX / design och drift. <br><br> För att testa, Användare: jespernyhlen@mail.com, Lösenord: hejhej',
+            },
+            english: {
+                subTitle: 'Project',
+                title: 'Webtrello',
+                textContent:
+                    'A platform under development. Registered users can create kankan boards to easily add and view activities using drag and drop technology. It is also possible to create teams to assign members to specific activities. Built with React, Node.js, Express and MongoDB. Web development, UX / design and operation. <br> <br> To test, User: jespernyhlen@mail.com, Password: hejhej',
+            },
+            websiteLink: 'https://jespernyhlenjs.me/',
+            githubLink: 'https://github.com/jespernyhlen/management',
+            badges: `<span>React</span><span>NodeJS</span><span>Express</span><span>MongoDB</span><span>Nginx</span><span>JavaScript</span><span>CSS</span>`,
+        },
         moviesnow: {
             img: portfolioImg2,
             swedish: {
@@ -60,7 +79,7 @@ const projects = {
             img: portfolioImg3,
             swedish: {
                 subTitle: 'Projekt',
-                title: 'Authentication',
+                title: 'Autentisering',
                 textContent:
                     'En designad autentiseringsgrund med stöd för Facebook / Google-inloggning och användarhantering i ett backend-API. Byggd med React, Node.js, Express och MongoDB. Webbutveckling, UX / design och drift.',
             },
